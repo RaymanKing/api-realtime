@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+// Importacion del objeto firebase
+import { useFirebaseApp } from 'reactfire'
 
 function App() {
+  const firebase = useFirebaseApp();
+  console.log(firebase)
   return (
     <div className="App">
       <header className="App-header">
