@@ -1,4 +1,6 @@
-export default {
+import firebase from 'firebase'
+
+const firebaseConfig = {
     apiKey: "AIzaSyCmNVPoAe-gRmmR7zO-GDBDAVwIVj7Ys8A",
     authDomain: "api-realtime-bc4f6.firebaseapp.com",
     databaseURL: "https://api-realtime-bc4f6-default-rtdb.firebaseio.com",
@@ -8,3 +10,7 @@ export default {
     appId: "1:484730162615:web:d689cdb63fdb4036aaec32",
     measurementId: "G-H02W6W75BJ"
 }
+
+firebase.initializeApp(firebaseConfig);
+
+export default firebase;
