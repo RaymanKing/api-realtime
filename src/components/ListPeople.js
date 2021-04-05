@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { render } from '@testing-library/react';
+import React, { componentDidMount ,useEffect, useState } from 'react';
 import firebase from '../util/firebase'
 import People from './People'
 
 export default function ListPeople() {
-  const [listPeople, setListPeople] = useState();
+  const [listPeople, setListPeople] = useState(0);
+
+ 
+
+  
 
   useEffect(() => {
     const people = firebase.database().ref("Personas");
@@ -14,8 +19,8 @@ export default function ListPeople() {
         listPeople.push(peoples[p]);
       }
       setListPeople(listPeople);
-    }, []);
-  });
+    });
+  }, []);  
 
   return( 
     <div>
