@@ -1,5 +1,4 @@
-import { render } from '@testing-library/react';
-import React, { componentDidMount ,useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import firebase from '../util/firebase'
 import People from './People'
 
